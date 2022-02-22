@@ -35,7 +35,7 @@ Some samples of the test cases are shown below. We could see that many of them a
 
 ## Usage
 
-These test suites are readily used in your custom code following.
+These test suites are readily used in your custom code following and code snippet below:
 
 ```python
 import pandas as pd
