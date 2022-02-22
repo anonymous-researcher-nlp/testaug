@@ -3,10 +3,10 @@
 TestAug is a framework that augments the template-based test suite to better test NLP models' linguistic capabilities.
 
 The framework is best described in the diagram shown below:
-- Step 1: Specify the linguistic capability one would like to test. For example, the capability of handling negation for a sentiment classifier $\mathcal{M}$.
+- Step 1: Specify the linguistic capability one would like to test. For example, the capability of handling negation for a sentiment classifier.
 - Step 2: Use samples from an existing template-based test suite as demonstrations to elicit GPT-3 for test case generation. 
 - Step 3: Filter the invalid test cases.
-- Step 4: Augment the template-based test suite to test the classifier $\mathcal{M}$ for its linguistic capability in question.
+- Step 4: Augment the template-based test suite to test the classifier for its linguistic capability in question.
 - Step 5 (Optional): Complement the existing template-based test suites with new templates generated from GPT-3.
 
 ![](resources/001.png)
