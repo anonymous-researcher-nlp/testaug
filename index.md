@@ -11,6 +11,10 @@ The framework is best described in the diagram shown below:
 
 ![](resources/001.png)
 
+Our test suites could *consistently* augments the template-based test suites to better reveal a NLP model's erroneous behaviors.
+
+![](resources/003.png)
+
 Currently, TestAug system supports NLP tasks including sentiment analysis, paraphrase detection, and natural language inference. 
 
 # Test Suites
@@ -25,7 +29,7 @@ The statistics and download link for our GPT-3 test suites are shown below.
 | Paraphrase Detection       | 6                       | 1916 | [`qqp.pkl`](data/qqp.pkl)             |
 | Natural Language Inference | 17                      | 2942 | [`nli.pkl`](data/nli.pkl)             |
 
-Some samples of the test cases are shown below. We could see that many of them are substantially different from the test cases from the template-based test suites (see our paper for more details).
+Some samples of the test cases are shown below. We could see that many of them are *substantially* more diverse than the test cases from the template-based test suites (see our paper for more details).
 
 ![](resources/002.jpg)
 
