@@ -3,17 +3,18 @@
 TestAug is a framework that augments the template-based test suite to better test NLP models' linguistic capabilities.
 
 The framework is best described in the diagram shown below:
-- Step 1: Specify the linguistic capability one would like to test. For example, the capability of handling negation for a sentiment classifier.
+- Step 1: Specify the linguistic capability one would like to test. For example, the capability of handling negation for a sentiment classifier $\mathcal{M}$.
 - Step 2: Use samples from an existing template-based test suite as demonstrations to elicit GPT-3 for test case generation. 
 - Step 3: Filter the invalid test cases.
-- Step 4: Augment the template-based test suite to test the classifier for its linguistic capability in question.
-- Step 5 (Optional): Complement the existing template-based test suites with new templates generated from GPT-3.
+- Step 4: Augment the template-based test suite to test the classifier $\mathcal{M}$ for its linguistic capability in question.
+- Step 5: Complement the existing template-based test suites with new templates generated from GPT-3.
+- Step 6: Use the test suite to test the target classifiers' linguistic capabilities.
 
 ![](resources/001.png)
 
-Our test suites could *consistently* augments the template-based test suites to better reveal a NLP model's erroneous behaviors.
+We have empirically shown that our system are better capable of generating test cases to detect more bugs than template-based test suites.
 
-![](resources/003.png)
+![](/home/yang/website/testaug/resources/index.assets/003.jpg)
 
 Currently, TestAug system supports NLP tasks including sentiment analysis, paraphrase detection, and natural language inference. 
 
@@ -21,21 +22,21 @@ Currently, TestAug system supports NLP tasks including sentiment analysis, parap
 
 ## Preview, Statistics, and Download Links
 
-The statistics and download link for our GPT-3 test suites are shown below.
+The statistics and download link for our GPT-3 test suites are shown below. They could be either used individually or together with template-base test suites such as [CheckList](https://github.com/marcotcr/checklist) and [LoNLI](https://github.com/microsoft/LoNLI).
 
 | Task                       | Linguistic Capabilities | Size | Download                              |
 | -------------------------- | ----------------------- | ---- | ------------------------------------- |
-| Sentiment Analysis         | 4                       | 1607 | [`sentiment.pkl`](data/sentiment.pkl) |
-| Paraphrase Detection       | 6                       | 1916 | [`qqp.pkl`](data/qqp.pkl)             |
-| Natural Language Inference | 17                      | 2942 | [`nli.pkl`](data/nli.pkl)             |
+| Sentiment Analysis         | 4                       | 3275 | [`sentiment.pkl`](data/sentiment.pkl) |
+| Paraphrase Detection       | 6                       | 6427 | [`qqp.pkl`](data/qqp.pkl)             |
+| Natural Language Inference | 7                       | 4976 | [`nli.pkl`](data/nli.pkl)             |
 
-Some samples of the test cases are shown below. We could see that many of them are *substantially* more diverse than the test cases from the template-based test suites (see our paper for more details).
+Some samples of the test cases are shown below. We could see that many of them are **substantially** different from the test cases from the template-based test suites (see our paper for more details).
 
-![](resources/002.jpg)
+![](/home/yang/website/testaug/resources/index.assets/002.png)
 
 ## Usage
 
-These test suites are readily used in your custom code following and code snippet below:
+These test suites are readily used in your custom code following.
 
 ```python
 import pandas as pd
@@ -58,7 +59,3 @@ test_df = test_df.assign(error=test_df.label != test_df.pred)
 print("The per capability error rate is shown below:")
 print(test_df.groupby("capability").error.mean())
 ```
-
-If you would like to reproduce our experiments in Table 3 and Table 10. Please refer to our paper together with the [CheckList](https://github.com/marcotcr/checklist) and [LoNLI](https://github.com/microsoft/LoNLI) repositories.
-
-
