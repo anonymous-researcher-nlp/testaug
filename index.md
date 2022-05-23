@@ -10,11 +10,11 @@ The framework is best described in the diagram shown below:
 - Step 5: Complement the existing template-based test suites with new templates generated from GPT-3.
 - Step 6: Use the test suite to test the target classifiers' linguistic capabilities.
 
-![](resources/001.png)
+![](resource/001.png)
 
 We have empirically shown that our system are better capable of generating test cases to detect more bugs than template-based test suites.
 
-![](/home/yang/website/testaug/resources/index.assets/003.jpg)
+![](resource/003.jpg)
 
 Currently, TestAug system supports NLP tasks including sentiment analysis, paraphrase detection, and natural language inference. 
 
@@ -32,7 +32,7 @@ The statistics and download link for our GPT-3 test suites are shown below. They
 
 Some samples of the test cases are shown below. We could see that many of them are **substantially** different from the test cases from the template-based test suites (see our paper for more details).
 
-![](/home/yang/website/testaug/resources/index.assets/002.png)
+![](resource/002.png)
 
 ## Usage
 
