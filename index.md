@@ -32,7 +32,7 @@ The statistics and download link for our GPT-3 test suites are shown below. They
 
 Some samples of the test cases are shown below. We could see that many of them are **substantially** different from the test cases from the template-based test suites (see our paper for more details).
 
-![](../resource/002.jpg)
+![](../resource/002.png)
 
 ## Usage
 
