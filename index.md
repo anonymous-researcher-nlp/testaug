@@ -59,3 +59,9 @@ test_df = test_df.assign(error=test_df.label != test_df.pred)
 print("The per capability error rate is shown below:")
 print(test_df.groupby("capability").error.mean())
 ```
+
+
+## Experiments
+If you would like to reproduce the experiments in the paper or extend our work, check out our [code base](https://github.com/anonymous-researcher-001/testaug)!
+
+![](resource/004.png)
